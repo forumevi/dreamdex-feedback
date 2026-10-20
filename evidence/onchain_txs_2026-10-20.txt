@@ -1,0 +1,18 @@
+# On-chain engagement proof
+# Builder: forumevi (@0xReddawn)
+# Date: 2026-10-20
+# Network: Hideki testnet (chain 50383, Somnia Tokyo)
+# Account: 0xB7F7e388c55f1fA0d553F8Dc1503D260Cc0129f8
+
+chain    | tx                                                                 | what                                    | status
+---------|--------------------------------------------------------------------|-----------------------------------------|-------
+Hideki 50383 | 0xcf78b3671ffb4fe3e89ada4230773e10023117b3c3705d3959e2a0ccad02f86b | BTC-PERP short order, Perps Arena, app.testnet.dreamdex.io | success
+
+# Read-only RPC probes (bug reproduction, no signing required)
+# All probes ran against https://api.hideki2.infra.testnet.somnia.network
+
+probe | method                  | result                        | finding
+------|-------------------------|-------------------------------|--------
+BUG-1 | eth_chainId             | 0xc4cf (50383)                | packages/core NETWORK=testnet returns chainId 50312, not 50383
+BUG-2 | SDK dist exports scan   | no SOMNIA_HIDEKI_TESTNET_ADDRESSES | markets-sdk missing Hideki address export
+BUG-3 | eth_getBalance          | 0x0 STT on fresh voucher acct | stop order 0.15 STT req not documented; block 27866313
