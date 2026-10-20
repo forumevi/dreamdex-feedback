@@ -49,6 +49,6 @@ via its own `config.ts` with `NETWORK=hideki`; `packages/core` does not.
 ## Environment
 
 - SDK: `@somnia-chain/markets-sdk` bundled in `packages/perp-core/node_modules`
-- Network: Somnia Tokyo testnet (chain 50383) (chain 50383)
+- Network: Somnia Tokyo testnet (chain 50383)
 - Wallet: n/a (read-only probe)
 - Bot kit commit: 2579866

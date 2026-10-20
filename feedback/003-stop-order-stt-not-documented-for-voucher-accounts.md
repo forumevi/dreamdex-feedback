@@ -54,6 +54,6 @@ with no guidance on why or how to fix it.
 
 ## Environment
 
-- Network: Somnia Tokyo testnet (chain 50383) (chain 50383), block 27866313
+- Network: Somnia Tokyo testnet (chain 50383), block 27866313
 - Wallet: fresh voucher-funded account (0 STT, 1000 paper USDso)
 - Bot kit commit: 2579866
